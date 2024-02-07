@@ -1,0 +1,16 @@
+FROM python:3.8.10-slim AS builder
+
+WORKDIR /opt/airflow/app
+
+COPY . .
+
+RUN mkdir -p /opt/airflow/app/processed_data /opt/airflow/app/archived_data
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+FROM python:3.8.10-slim
+
+WORKDIR /opt/airflow/app
+
+COPY --from=builder /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
+COPY --from=builder /opt/airflow/app/ /opt/airflow/app/
