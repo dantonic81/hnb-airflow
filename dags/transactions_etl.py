@@ -25,11 +25,11 @@ load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-RAW_DATA_PATH = "/opt/dagster/app/raw_data"
-PROCESSED_DATA_PATH = "/opt/dagster/app/processed_data"
-ARCHIVED_DATA_PATH = "/opt/dagster/app/archived_data"
+RAW_DATA_PATH = "dags/raw_data"
+PROCESSED_DATA_PATH = "dags/processed_data"
+ARCHIVED_DATA_PATH = "dags/archived_data"
 INVALID_RECORDS_TABLE = "data.invalid_transactions"
-TRANSACTIONS_SCHEMA_FILE = "transactions_schema.json"
+TRANSACTIONS_SCHEMA_FILE = "dags/transactions_schema.json"
 
 
 # Load the JSON schema once and store it in a variable

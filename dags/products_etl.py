@@ -24,9 +24,9 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-RAW_DATA_PATH = "raw_data"
-PROCESSED_DATA_PATH = "processed_data"
-ARCHIVED_DATA_PATH = "archived_data"
+RAW_DATA_PATH = "dags/raw_data"
+PROCESSED_DATA_PATH = "dags/processed_data"
+ARCHIVED_DATA_PATH = "dags/archived_data"
 INVALID_RECORDS_TABLE = "data.invalid_products"
 PRODUCTS_SCHEMA_FILE = "dags/products_schema.json"
 

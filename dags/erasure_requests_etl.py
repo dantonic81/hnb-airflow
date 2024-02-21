@@ -25,12 +25,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-RAW_DATA_PATH = "/opt/dagster/app/raw_data"
-PROCESSED_DATA_PATH = "/opt/dagster/app/processed_data"
-ARCHIVED_DATA_PATH = "/opt/dagster/app/archived_data"
+RAW_DATA_PATH = "dags/raw_data"
+PROCESSED_DATA_PATH = "dags/processed_data"
+ARCHIVED_DATA_PATH = "dags/archived_data"
 INVALID_RECORDS_TABLE = "data.invalid_customers"
-ERASURE_REQUESTS_SCHEMA_FILE = "erasure_requests_schema.json"
+ERASURE_REQUESTS_SCHEMA_FILE = "dags/erasure_requests_schema.json"
 
 
 with open(ERASURE_REQUESTS_SCHEMA_FILE, "r") as schema_file:

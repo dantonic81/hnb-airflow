@@ -283,14 +283,5 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
-  docker_user_code:
-    build:
-      dockerfile: Dockerfile_user_code
-    container_name: docker_user_code
-    image: docker_user_code_image
-    restart: always
-    command: [ "tail", "-f", "/dev/null" ]  # Keep the container running
-
-
 volumes:
   postgres-db-volume:
