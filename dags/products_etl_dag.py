@@ -25,7 +25,7 @@ dag = DAG(
     'products_etl_dag',
     default_args=default_args,
     description='DAG for running products ETL',
-    schedule_interval=timedelta(days=1),  # Run daily
+    schedule_interval='0 0 * * *',  # Run every day at 00:00
 )
 
 # Define the PythonOperator to run your ETL script

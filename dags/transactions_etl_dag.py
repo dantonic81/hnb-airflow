@@ -25,7 +25,7 @@ dag = DAG(
     'transactions_etl_dag',
     default_args=default_args,
     description='DAG for running transactions ETL',
-    schedule_interval=timedelta(days=1),  # Run daily
+    schedule_interval='0 * * * *',  # Run every hour at minute 0
 )
 
 # Define the PythonOperator to run your ETL script
