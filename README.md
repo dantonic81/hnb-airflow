@@ -9,7 +9,9 @@ Orchestration tool of choice is Airflow.
 
 - `dags/`: Directory containing all needed files including schemas and etl modules
 - `sql-scripts/`: Directory containing the script to initialize the database
+- `tests/`: Directory containing tests for Python code (not included)
 
+.env.example file contains environment variables added here for convenience.
 
 Airflow DAGs:
 - transactions_etl_dag.py
@@ -105,7 +107,10 @@ Once in your virtual environment, install dependencies from requirements.txt fil
 
     pip install -r requirements.txt
 
-Run the unit tests using pytest:
+All the requirements in requirements.txt file are there only for the purpose of testing, they are not needed
+for the program to function because the Airflow deployment already comes with them included. 
+
+Run the unit tests (not included) using pytest:
 
    ```bash
    pytest
